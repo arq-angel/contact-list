@@ -1,0 +1,99 @@
+/* global and reusable css start */
+:root {
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  background: url("./assets/mountaints_01.jpg") no-repeat center;
+  background-size: cover;
+}
+/* global and reusable css end */
+
+/* css start */
+/* phone layout */
+.phone {
+  background: url("./assets/mountaints_01.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.phone::-webkit-scrollbar {
+  display: none;
+}
+
+/* Home Screen */
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: radial-gradient(rgb(246, 117, 246), rgb(147, 0, 0));
+}
+
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: radial-gradient(rgb(246, 117, 246), rgb(147, 0, 0));
+}
+
+#label {
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  animation: slideAnimation 3s ease-in-out infinite;
+}
+
+@keyframes slideAnimation {
+  0%,
+  100% {
+    color: #000;
+    filter: drop-shadow(0 0 10px purple);
+  }
+  50% {
+    color: purple;
+    filter: drop-shadow(0 0 10px purple);
+  }
+}
+
+.header i {
+  right: 10px;
+}
+
+.appScreen i {
+  cursor: pointer;
+}
+/* css end */
